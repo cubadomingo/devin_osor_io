@@ -1,0 +1,11 @@
+<% if logged_in? %>
+ <div class="center-button">
+ <%= link_to "Make a new post", new_post_path, class: "btn btn-primary" %>
+ </div>
+<% end %>
+
+<div class="padding_posts">
+  <% if @user.posts.any? %>
+    <%= render @posts %>
+  <% end %>
+</div>

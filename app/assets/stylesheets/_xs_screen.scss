@@ -1,0 +1,541 @@
+/* Navbar */
+
+.navbar .nav {
+
+ .nav > li > a:hover {
+  color: $pink;
+  font-size: 25px;
+ }
+
+ .neon-green {
+  color: $neon_green;
+ }
+
+ .dropdown {
+  > a {
+   color: $neon_green;
+   font-size: 25px;
+  }
+
+  > a:focus {
+   background-color: white;
+  }
+
+  > a:hover {
+   color: $neon_green;
+   font-size: 25px;
+  }
+ }
+
+ > li > a {
+  color: $orange;
+  font-size: 25px;
+ }
+}
+
+.navbar-default {
+  background: white;
+  border-color: $black;
+
+ .navbar-brand {
+  font-size: 20px;
+  color: $neon_green;
+ }
+
+ .navbar-toggle {
+  border-color: $black;
+ }
+
+ .navbar-collapse {
+  background: white;
+  border-color: $black;
+ }
+
+ .navbar-toggle {
+  background-color: white;
+
+  .icon-bar {
+   background-color: $black;
+   }
+ }
+
+ .navbar-toggle:hover {
+  background-color: white;
+ }
+
+ .navbar-nav .open .dropdown-menu {
+  > li > a {
+   color: $pink;
+   font-size: 25px;
+  }
+ }
+
+ > li > a:hover {
+  color: $pink;
+  font-size: 25px;
+ }
+}
+
+/* body */
+ 
+body {
+ font-family: "Dejavu Sans Mono";
+ background-image: url("background.jpg");
+ background-size: 100% auto;
+ background-repeat: repeat-y;
+ margin-top: 50px;
+ margin-bottom: 90px;
+
+ h1 {
+  color: $orange;
+  font-size: 35px;
+  margin: 0 auto;
+  text-align: center;  
+ }
+
+ h2 {
+  color: $pink;
+  font-size: 18px;
+  text-align: center;
+ }
+
+ h3 {
+  color: $orange;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+ }
+
+ p {
+  color: $black;
+  font-size: 16px;
+  text-align: center;
+ }
+
+ ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding-left: 10px;
+  margin-top: 5px;
+ }
+
+ li {
+  margin: 0;
+  line-height: 50px;
+ }
+
+ a {
+  color: $orange;
+  text-decoration: none;
+  text-align: center;
+ }
+
+ a:link {
+  text-decoration: none;
+ }
+
+ a:hover {
+  color: $pink;
+ }
+}
+ 
+/* images */
+ 
+.glyph_size {
+ height: 50px;
+ width: 50px;
+ margin-bottom: 10px;
+}
+
+.face {
+ width: 50%;
+ height: 50%;
+ margin-top: 10px;
+}
+ 
+/* static-pages */
+ 
+.page_height {
+ min-height: 550px;
+}
+ 
+.center {
+ float: none;
+ margin: 0 auto;
+}
+ 
+/* terminal shell window */
+ 
+ .terminal_title {
+  margin: 10px;
+ }
+
+.title{
+ margin-left: -70px;
+ font-size: 15px; 
+}
+ 
+.terminal_text {
+ color: $neon_green;
+ font-size: 16px;
+ line-height: 5px;
+ text-align: left;
+}
+ 
+.cat_height {
+ line-height: 25px;
+ margin-right: 10px;
+}
+
+#shell{
+ min-width: 0 auto;
+ min-height: 480px;
+ background: white;
+ border-style: solid;
+ border-color: black;
+ border-width: 1px;
+ border-radius: 3px;
+ padding: 0;
+ margin-top: 35px;
+ color: $title;
+}
+ 
+#upper{
+ background: #e5e5e5; 
+ background: -webkit-linear-gradient(#e5e5e5 0%, #b0b0b0 100%);
+ background: linear-gradient(#e5e5e5 0%, #b0b0b0 100%);
+ background-image: -moz-linear-gradient(#e5e5e5 0%, #b0b0b0 100%);
+ -webkit-border-radius: 3px 3px 0px 0px;
+ -moz-border-radius: 3px 3px 0px 0px;
+ border-radius: 3px 3px 0px 0px;
+ height: 35px;
+ text-align: center;
+ padding-top: 5px;
+}
+ 
+#buttons {
+ margin-left: 5px;
+ margin-top: 3px;
+}
+ 
+.button{
+ width: 13px;
+ height: 13px;
+ -webkit-border-radius: 100%;
+ -moz-border-radius: 100%;
+ border-radius: 100%;
+ margin: 4px 4px 4px 4px;
+ float: left;
+}
+ 
+.red{
+ background: $redCircle;
+ border: 1px solid darken(#f04341, 10%);
+}
+ 
+.yellow{
+ background: $yellowCircle;
+ border: 1px solid darken(#f5b868, 10%);
+}
+ 
+.green{
+ background: $greenCircle;
+ border: 1px solid darken(#96cf7d, 10%);
+}
+ 
+#enter{
+ display: block;
+ padding-top: 0;
+ padding-left: 10px;
+ padding-right: 10px;
+ padding-bottom: 10px;
+ width: 100%;
+ height: 100%;
+}
+ 
+.terminal_user {
+ color: $orange;
+}
+ 
+#enter:focus{
+ outline: 0px solid transparent;
+}
+ 
+#cursor:after {
+ content: "|";
+ color: rgb(085,184,072);
+ opacity: 0;
+ animation: cursor 1s infinite;
+}
+
+@keyframes cursor {
+ 0% {
+  opacity: 0;
+ }
+ 40% {
+  opacity: 0;
+ }
+ 50% {
+  opacity: 1;
+ }
+ 90% {
+  opacity: 1;
+ }
+ 100% {
+  opacity: 0;
+ }
+}
+ 
+/* text edit window */
+ 
+.no_padding {
+ margin-top: 20px;
+ margin-left: 1px;
+ margin-right: 1px;
+}
+ 
+.neon_green {
+ color: $neon_green;
+}
+ 
+.black {
+ color: black;
+}
+ 
+.main_buffer {
+ margin-top: 20px;
+ margin-left: 0;
+ margin-right: 0;
+}
+ 
+.top_buffer {
+ margin-top: 30px;
+ margin-left: 70px;
+ margin-right: 70px;
+}
+ 
+.reduce_font {
+ font-size: 50px;
+ line-height: 30px;
+}
+ 
+#text_edit2 {
+ min-width:0 auto;
+ min-height: 480px;
+ background: white;
+ border-style: solid;
+ border-color: black;
+ border-width: 1px;
+ border-radius: 3px;
+ padding: 0;
+}
+ 
+#enter_text{
+ margin-top: 20px;
+ margin-left: 10px;
+ width: 100%;
+ height: 100%;
+}
+
+.align_glyph {
+ text-align: center;
+}
+ 
+/* footer */
+ 
+footer {
+ background-color: white;
+ position: absolute;
+ left: 0;
+ bottom: 0;
+ margin-top: 10px;
+ height: 90px;
+ width: 100%;
+ position: absolute;
+ overflow: hidden;
+}
+ 
+.center_footer {
+ padding-bottom: 10px;
+ text-align: center;
+ word-spacing: 20px;
+}
+ 
+.footer_font {
+ font-size: 20px;
+}
+ 
+.margin_foot {
+ margin-top: 10px;
+}
+
+.margin_foot2 {
+ padding-top: 1px;
+}
+
+/* blog post */
+
+.padding_posts {
+ padding-bottom: 20px;
+}
+
+.post_button {
+ margin-top: 60px;
+ text-align: center;
+}
+
+#text_edit3 {
+ min-width:0 auto;
+ min-height:0 auto;
+ background: white;
+ border-style: solid;
+ border-color: $black;
+ border-width: 1px;
+ border-radius: 8px;
+ padding: 20px;
+}
+
+.button-margin {
+ margin-top: 10px;
+}
+
+.posted_at {
+ text-align: left;
+ color: $neon_green;
+ font-size: 13px;
+ margin-bottom: 10px;
+ margin-top: 5px;
+ font-family: "Dejavu Sans Mono"
+
+ > a {
+  color: $pink;
+  font-family: "Dejavu Sans Mono"
+ }
+}
+
+.title_post {
+ text-align: left;
+ line-height: 20px;
+ font-size: 20px;
+ color: $black;
+
+ > a {
+  color: $black;
+  font-size: 17px;
+ }
+}
+
+.body_post {
+
+ > p {
+  font-family: "Roboto";
+  color: $black;
+  text-align: left;
+  font-size: 14px;
+ }
+}
+
+/* comment styling */
+
+.comment_section {
+ border-style: solid;
+ border-color: $black;
+ border-width: 1px;
+ border-radius: 8px;
+ padding: 10px;
+ margin-bottom: 10px;
+}
+
+.comment_name {
+ font-family: "Roboto";
+ text-align: left;
+ color: $black;
+ font-size: 14px;
+}
+
+.comment_body {
+ font-family: "Roboto";
+ font-size: 14px;
+ color: $black;
+ text-align: left;
+}
+
+.comment_left_at {
+ text-align: left;
+ color: $neon_green;
+ font-size: 12px;
+ margin: 0 auto;
+}
+
+.comment_button {
+ margin-top: 10px;
+ float: center;
+ text-align: center;
+}
+
+.comment_movement {
+ color: $black;
+}
+
+/* buttons */
+
+.center-button {
+ text-align: center;
+ margin-top: 5px;
+}
+ 
+/* admin_login */
+
+.login_center {
+ float: center;
+ text-align: center;
+}
+
+.btn-primary {
+ border-color: $black;
+ background-color: $black;
+  
+  :hover {
+    border-color: $orange;
+    background-color: $orange;
+  }
+}
+
+.enter_login {
+ margin: 10px;
+}
+
+/* mixcellaneous */
+
+
+
+.margin_adjust {
+ padding-top: 50px;
+}
+
+.left {
+ text-align: left;
+ float: left;
+}
+
+.terminal_text1 {
+  color: $neon_green;
+  font-size: 25px;
+ > a {
+  color: $neon_green;
+  font-size: 25px;
+  line-height: 30px;
+ }
+}
+
+#shell2{
+ min-width: 0 auto;
+ min-height: 50px;
+ background: white;
+ border-style: solid;
+ border-color: black;
+ border-width: 1px;
+ border-radius: 3px;
+ padding: 0;
+ color: $title;
+}

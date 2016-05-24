@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div class="row no_padding">
+    <div class="col-xs-12 center" id="shell2">
+      <div id="upper">
+        <div id="buttons">
+          <div class="button red">
+          </div>
+          <div class="button yellow">
+          </div>
+          <div class="button green">
+          </div>
+        </div>
+      </div>
+      <div class="enter_login">
+        <h1 class="terminal_title">Create a post</h1>
+          <div>
+            <%= form_for(@post) do |f| %>
+              <%= render 'shared/error_messages1' %>
+        
+              <%= f.label :title %>
+              <%= f.text_area :title, class: 'form-control' %>
+              
+              <%= f.label :body %>
+              <%= f.text_area :body, class: 'form-control' %>
+
+              <%= f.label :category %>
+              <%= f.collection_select(:category_id, Category.all, :id, :name, {:prompt => "Please select a category"}) %>
+
+              <div class="text-center button-margin">
+              <%= f.submit "Save Changes", class: 'btn btn-primary' %>
+              </div>
+            <% end %>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

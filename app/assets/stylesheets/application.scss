@@ -1,0 +1,63 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "compass/css3";
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+/* mixins, variables, etc. */
+
+@mixin box_sizing {
+  -moz-box-sizing:     border-box;
+  -webkit-box-sizing:  border-box;
+  box-sizing:          border-box;
+}
+
+$black: #000;
+$red: #ff6c6b;
+$title: #383838;
+$redCircle: #f04341;
+$greenCircle: #96cf7d;
+$yellowCircle: #f5b868;
+$pink: rgb(234,011,140);
+$orange: rgb(235,132,045);
+$blue: rgb(051,137,178);
+$neon_green: rgb(085,184,072);
+
+/* fonts */
+
+@font-face {
+	font-family: "DejaVu Sans Mono";
+	src: font-url('DejaVuSansMono.ttf') format('truetype');
+}
+
+/* html doc */
+
+html {
+  position: relative;
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+/* XS Screen < 768px */
+
+@import 'xs_screen';
+
+/* Small Screen > 768px */
+
+@media (min-width: 768px) {
+
+} 
+
+/* Medium Screen > 992px */
+
+@media (min-width: 992px) {
+
+}
+
+/* Large Screen > 1200px */
+
+@media (min-width: 1200px) {
+  
+}
+
+
+
