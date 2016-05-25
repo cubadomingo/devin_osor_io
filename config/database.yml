@@ -23,16 +23,16 @@ default: &default
 
 development:
   <<: *default
-  database: personal_site_new_development
+  database: postgres_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: personal_site_new
+  username: devinosorio
 
   # The password associated with the postgres role (username).
-  #password:
+  password: Python510
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: personal_site_new_production
-  username: personal_site_new
-  password: <%= ENV['PERSONAL_SITE_NEW_DATABASE_PASSWORD'] %>
+  username: cubadomingo
+  password: Python510
