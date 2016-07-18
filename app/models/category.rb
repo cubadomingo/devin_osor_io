@@ -1,4 +1,4 @@
 class Category < ActiveRecord::Base
-	belongs_to :users
+	belongs_to :user
 	has_many :posts, dependent: :destroy
 end
