@@ -1,8 +1,8 @@
 <div class="container-fluid">
   <div class="row no_padding">
-    <div class="col-xs-12 center" id="shell2">
-      <div id="upper">
-        <div id="buttons">
+    <div class="col-xs-12 center shell2">
+      <div class="upper">
+        <div class="buttons">
           <div class="button red">
           </div>
           <div class="button yellow">
@@ -16,10 +16,10 @@
           <div>
             <%= form_for(@post) do |f| %>
               <%= render 'shared/error_messages1' %>
-        
+
               <%= f.label :title %>
               <%= f.text_area :title, class: 'form-control' %>
-              
+
               <%= f.label :body %>
               <%= f.text_area :body, class: 'form-control' %>
 

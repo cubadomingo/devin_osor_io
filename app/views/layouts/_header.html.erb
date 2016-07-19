@@ -14,14 +14,15 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <% if params[:controller] == "static_pages" %>
-          <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/#about">about</a></li>
-          <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/#stack">stack</a></li>
-          <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/#contact">contact</a></li>
-          <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/blog">blog</a></li>
+          <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/#about">{about}</a></li>
+          <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/#stack">{stack}</a></li>
+          <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/#projects">{projects}</a></li>
+          <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/#contact">{contact}</a></li>
+          <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/blog">{blog}</a></li>
         <% else %>
-          <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/">home</a></li>
-          <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/categories">categories</a></li>
-            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/blog">blog</a></li>
+          <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/">{home}</a></li>
+          <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/categories">{categories}</a></li>
+            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/blog">{blog}</a></li>
         <% end %>
 
         <% if logged_in? %>

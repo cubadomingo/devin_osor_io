@@ -1,6 +1,6 @@
 <div class="container-fluid padding_posts">
   <div class="row no_padding">
-    <div class="col-lg-12 center" id="text_edit3">
+    <div class="col-lg-12 center text_edit3">
       <% category = Category.find(@post.category_id) %>
       <h1 class="title_post"><%= @post.title %></h1>
       <p class="posted_at">Posted <%= time_ago_in_words(@post.created_at) %> ago in <%= link_to category.name, category_path(category.id) %></p>
@@ -27,10 +27,10 @@
         <%= form_for @comment do |f| %>
 
               <%= f.hidden_field :post_id, :value => @post.id %>
-        
+
               <%= f.label :name %>
               <%= f.text_field :name, class: 'form-control' %>
-              
+
               <%= f.label :body %>
               <%= f.text_area :body, class: 'form-control', 'placeholder' => 'Have anything to say?' %>
 

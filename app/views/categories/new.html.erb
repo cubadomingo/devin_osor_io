@@ -1,8 +1,8 @@
 <div class="container-fluid">
   <div class="row no_padding">
-    <div class="col-xs-12 center" id="text_edit3">
-      <div id="upper">
-        <div id="buttons">
+    <div class="col-xs-12 center text_edit3">
+      <div class="upper">
+        <div class="buttons">
           <div class="button red">
           </div>
           <div class="button yellow">
@@ -16,7 +16,7 @@
           <div>
             <%= form_for(@category) do |f| %>
               <% if @category.errors.any? %>
-                <div id="error_explanation">
+                <div class="error_explanation">
                 <div class="alert alert-danger"> The form contains <%= pluralize(@category.errors.count, "error") %>.
                 </div>
                 <ul>
@@ -26,10 +26,10 @@
                 </ul>
                 </div>
               <% end %>
-        
+
               <%= f.label :name %>
               <%= f.text_field :name, class: 'form-control' %>
-              
+
               <div class="text-center button-margin">
               <%= f.submit "Create new category", class: 'btn btn-primary' %>
               </div>

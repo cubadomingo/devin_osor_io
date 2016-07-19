@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row no_padding">
-    <div class="col-xs-12 center" id="shell2">
+    <div class="col-xs-12 center" class="shell2">
       <div id="upper">
         <div id="buttons">
           <div class="button red">
@@ -16,10 +16,10 @@
           <div>
             <%= form_for(@user) do |f| %>
               <%= render 'shared/error_messages' %>
-        
+
               <%= f.label :name %>
               <%= f.text_field :name, class: 'form-control' %>
-              
+
               <%= f.label :email %>
               <%= f.email_field :email, class: 'form-control' %>
 

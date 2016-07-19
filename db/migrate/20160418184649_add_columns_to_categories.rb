@@ -1,5 +1,8 @@
 class AddColumnsToCategories < ActiveRecord::Migration
   def change
-    add_reference :categories, :user, index: true, foreign_key: true
+    create_table :categories do |t|
+      t.belongs_to :user, index: true
+      t.string :name
+    end
   end
 end

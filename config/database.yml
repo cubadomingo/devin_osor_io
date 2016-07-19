@@ -32,7 +32,7 @@ development:
   username: devinosorio
 
   # The password associated with the postgres role (username).
-  password: Python510
+  password: password
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -82,4 +82,4 @@ production:
   <<: *default
   database: personal_site_new_production
   username: cubadomingo
-  password: Python510
+  password: password

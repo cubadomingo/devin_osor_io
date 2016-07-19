@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row no_padding">
-    <div class="post_xs col-lg-12 center" id="text_edit3">
+    <div class="post_xs col-lg-12 center text_edit3">
       <h1 class="title_post"><%= link_to post.title, post %></h1>
       <% category = Category.find(post.category_id) %>
       <p class="posted_at">Posted <%= time_ago_in_words(post.created_at) %> ago in <%= link_to category.name, category_path(category.id) %></p>
@@ -8,7 +8,7 @@
         <% blog_post = truncate post.body, length: 200, escape: false %>
         <%= blog_post %>
       </div>
-      <% if blog_post.length < 200 %> 
+      <% if blog_post.length < 200 %>
         <div class="center-button">
           <% if post.comments.any? %>
             <% comment_count = post.comments.count %>
@@ -24,7 +24,7 @@
       <% end %>
     </div>
 
-    <div class="post_s col-lg-12 center" id="text_edit3">
+    <div class="post_s col-lg-12 center text_edit3">
       <h1 class="title_post"><%= link_to post.title, post %></h1>
       <% category = Category.find(post.category_id) %>
       <p class="posted_at">Posted <%= time_ago_in_words(post.created_at) %> ago in <%= link_to category.name, category_path(category.id) %></p>
@@ -32,7 +32,7 @@
         <% blog_post = truncate post.body, length: 300, escape: false %>
         <%= blog_post %>
       </div>
-      <% if blog_post.length < 300 %> 
+      <% if blog_post.length < 300 %>
         <div class="center-button">
           <% if post.comments.any? %>
             <% comment_count = post.comments.count %>
@@ -48,7 +48,7 @@
       <% end %>
     </div>
 
-    <div class="post_m col-lg-12 center" id="text_edit3">
+    <div class="post_m col-lg-12 center text_edit3">
       <h1 class="title_post"><%= link_to post.title, post %></h1>
       <% category = Category.find(post.category_id) %>
       <p class="posted_at">Posted <%= time_ago_in_words(post.created_at) %> ago in <%= link_to category.name, category_path(category.id) %></p>
@@ -56,7 +56,7 @@
         <% blog_post = truncate post.body, length: 200, escape: false %>
         <%= blog_post %>
       </div>
-      <% if blog_post.length < 200 %> 
+      <% if blog_post.length < 200 %>
         <div class="center-button">
           <% if post.comments.any? %>
             <% comment_count = post.comments.count %>
@@ -72,7 +72,7 @@
       <% end %>
     </div>
 
-    <div class="post_l col-lg-12 center" id="text_edit3">
+    <div class="post_l col-lg-12 center text_edit3">
       <h1 class="title_post"><%= link_to post.title, post %></h1>
       <% category = Category.find(post.category_id) %>
       <p class="posted_at">Posted <%= time_ago_in_words(post.created_at) %> ago in <%= link_to category.name, category_path(category.id) %></p>
@@ -80,7 +80,7 @@
         <% blog_post = truncate post.body, length: 200, escape: false %>
         <%= blog_post %>
       </div>
-      <% if blog_post.length < 200 %> 
+      <% if blog_post.length < 200 %>
         <div class="center-button">
           <% if post.comments.any? %>
             <% comment_count = post.comments.count %>
