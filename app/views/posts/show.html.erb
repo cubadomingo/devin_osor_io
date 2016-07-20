@@ -1,24 +1,36 @@
-<div class="container-fluid padding_posts">
-  <div class="row post_margin">
-    <div class="col-lg-12 post_body">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12 mac_app_body_blog">
+      <div class="upper">
+        <div class="buttons">
+          <div class="button red">
+          </div>
+          <div class="button yellow">
+          </div>
+          <div class="button green">
+          </div>
+          <span class="title">blog_post</span>
+        </div>
+      </div>
+    <div class="enter">
       <% category = Category.find(@post.category_id) %>
-      <h2 class="text-left"><%= @post.title %></h2>
+      <h1><%= @post.title %></h1>
       <p class="posted_at">Posted <%= time_ago_in_words(@post.created_at) %> ago in <%= link_to category.name, category_path(category.id) %></p>
       <div class="blog_post"><%= raw(@post.body) %></div>
       <% if logged_in? %>
-        <div class="text-center buttons_bottom_margin">
+        <div class="text-center button-margin-bottom">
           <span><%= link_to "edit", edit_post_path(@post.id), class: 'btn btn-primary' %></span>
           <span><%= link_to "delete", @post, method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %></span>
         </div>
       <% end %>
       <div>
         <% if @post.comments.any? %>
-          <h2 class="comment_movement">Comments (<%= @post.comments.count %>)</h2>
+          <h2 class="text-center">Comments (<%= @post.comments.count %>)</h2>
           <%  @post.comments.each do |comment| %>
-            <div class="comment_section">
-              <p class="comment_terminal_font orange">Comment by <%= comment.name %></p>
+            <div>
+              <p>Comment by <%= comment.name %></p>
               <p><%= comment.body %></p>
-              <p class="comment_terminal_font neon_green">Posted <%= time_ago_in_words(comment.created_at) %> ago</p>
+              <p>Posted <%= time_ago_in_words(comment.created_at) %> ago</p>
             </div>
           <% end %>
         <% end %>
@@ -34,10 +46,11 @@
               <%= f.label :body %>
               <%= f.text_area :body, class: 'form-control comment_reply', 'placeholder' => 'Have anything to say?' %>
 
-              <div class="text-center buttons_top_margin">
+              <div class="text-center button-margin">
               <%= f.submit "Post Comment", class: 'btn btn-primary' %>
               </div>
         <% end %>
+      </div>
     </div>
   </div>
 </div>

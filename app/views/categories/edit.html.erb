@@ -1,6 +1,6 @@
 <div class="container-fluid">
-  <div class="row no_padding post_margin">
-    <div class="col-xs-12 categories_body">
+  <div class="row ">
+    <div class="col-xs-12 mac_app_body">
       <div class="upper">
         <div class="buttons">
           <div class="button red">
@@ -10,9 +10,9 @@
           <div class="button green">
           </div>
         </div>
+        <span class="title">edit_category</span>
       </div>
-      <div class="enter_login">
-        <h2>edit_category</h2>
+      <div class="enter">
           <div>
             <%= form_for(@category) do |f| %>
               <% if @category.errors.any? %>
@@ -30,7 +30,7 @@
               <%= f.label :name %>
               <%= f.text_field :name, class: 'form-control' %>
 
-              <div class="text-center buttons_top_margin">
+              <div class="text-center button-margin">
               <%= f.submit "Save", class: 'btn btn-primary' %>
               </div>
             <% end %>

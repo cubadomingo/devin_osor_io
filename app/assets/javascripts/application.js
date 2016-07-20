@@ -20,3 +20,5 @@
 $(document).ready(function() {
     $(".dropdown-toggle").dropdown();
 });
+
+$('body').height(document.documentElement.clientHeight);

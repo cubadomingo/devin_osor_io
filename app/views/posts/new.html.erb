@@ -1,6 +1,6 @@
 <div class="container-fluid">
-  <div class="row no_padding post_margin">
-    <div class="col-xs-12 categories_body">
+  <div class="row">
+    <div class="col-xs-12 mac_app_body">
       <div class="upper">
         <div class="buttons">
           <div class="button red">
@@ -9,10 +9,10 @@
           </div>
           <div class="button green">
           </div>
+          <span class="title">new_post</span>
         </div>
       </div>
       <div class="enter">
-        <h2>create_a_post</h2>
           <div>
             <%= form_for(@post) do |f| %>
               <%= render 'shared/error_messages1' %>
@@ -24,10 +24,9 @@
               <%= f.text_area :body, class: 'form-control body_field' %>
 
               <%= f.label :category %>
-              <%= f.collection_select(:category_id, Category.all, :id, :name, {:prompt => "Please select a category"}) %>
-
-              <div class="text-center button-margin">
-              <%= f.submit "Create new post", class: 'btn btn-primary' %>
+              <%= f.collection_select(:category_id, Category.all, :id, :name, {:prompt => "Please select a category"}, {:class => "form-control"}) %>
+              <div class="text-center">
+              <%= f.submit "Create new post", class: 'btn btn-primary button-margin' %>
               </div>
             <% end %>
           </div>
@@ -35,4 +34,5 @@
     </div>
   </div>
 </div>
+
 

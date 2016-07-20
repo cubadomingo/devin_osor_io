@@ -1,7 +1,6 @@
 <div class="container-fluid">
-
-  <div class="row no_padding">
-    <div class="col-xs-12 center shell2">
+  <div class="row">
+    <div class="col-xs-12 mac_app_body">
       <div class="upper">
         <div class="buttons">
           <div class="button red">
@@ -10,27 +9,24 @@
           </div>
           <div class="button green">
           </div>
+          <span class="title">log_in</span>
         </div>
       </div>
-      <div class="enter_login">
-        <h1>log_in</h1>
-          <div>
-            <%= form_for(:session, url: login_path) do |f| %>
-
-              <%= f.label :email %>
-              <%= f.email_field :email, class: 'form-control' %>
-
-              <%= f.label :password %>
-              <%= f.password_field :password, class: 'form-control' %>
-              <div class="text-center">
-                <%= f.label :remember_me, class: 'checkbox inline' do %>
-                  <%= f.check_box :remember_me %>
-                  <span>Remember me</span>
-                <% end %>
-
-                <%= f.submit "Log in", class: 'btn btn-primary' %>
-              </div>
+      <div class="enter">
+        <div>
+          <%= form_for(:session, url: login_path) do |f| %>
+          <%= f.label :email %>
+          <%= f.email_field :email, class: 'form-control' %>
+          <%= f.label :password %>
+          <%= f.password_field :password, class: 'form-control' %>
+          <div class="text-center">
+            <%= f.label :remember_me, class: 'checkbox inline' do %>
+            <%= f.check_box :remember_me %>
+            <span>Remember me</span>
             <% end %>
+            <%= f.submit "Log in", class: 'btn btn-primary' %>
+          </div>
+          <% end %>
           </div>
       </div>
     </div>

@@ -12,6 +12,7 @@
 }
 
 $black: #000;
+$terminalBlack: rgb(51,51,51);
 $red: #ff6c6b;
 $title: #383838;
 $redCircle: #f04341;
@@ -22,6 +23,8 @@ $orange: rgb(235,132,045);
 $blue: rgb(051,137,178);
 $neon_green: rgb(085,184,072);
 $purple: rgb(127,63,152);
+$white: rgb(255,255,255);
+$grey: rgb(147,149,152);
 
 /* fonts */
 
@@ -73,7 +76,6 @@ html {
 
 /* Small Screen > 768px */
 
-@import 's_screen';
 
 /* Medium Screen > 992px */
 
