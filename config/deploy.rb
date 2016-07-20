@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 
-set :application, 'personal_app'
-set :repo_url, 'git@github.com:cubadomingo/personal_site_new.git'
+set :application, 'devin_osor_io'
+set :repo_url, 'git@github.com:cubadomingo/devin_osor_io.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
