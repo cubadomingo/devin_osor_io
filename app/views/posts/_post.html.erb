@@ -1,14 +1,14 @@
 <div class="container-fluid">
-  <div class="row no_padding">
-    <div class="post_xs col-lg-12 center text_edit3">
-      <h1 class="title_post"><%= link_to post.title, post %></h1>
+  <div class="row post_margin">
+    <div class="post_xs col-lg-12 post_body">
+      <h2 class="text-left"><%= link_to post.title, post %></h2>
       <% category = Category.find(post.category_id) %>
-      <p class="posted_at">Posted <%= time_ago_in_words(post.created_at) %> ago in <%= link_to category.name, category_path(category.id) %></p>
-      <div class="body_post_xs">
-        <% blog_post = truncate post.body, length: 200, escape: false %>
+      <p>Posted <%= time_ago_in_words(post.created_at) %> ago in <%= link_to category.name, category_path(category.id) %></p>
+        <% blog_post = truncate post.body, length: 1500, escape: false %>
+      <div class="blog_post">
         <%= blog_post %>
       </div>
-      <% if blog_post.length < 200 %>
+      <% if blog_post.length < 1000 %>
         <div class="center-button">
           <% if post.comments.any? %>
             <% comment_count = post.comments.count %>
@@ -18,80 +18,8 @@
           <% end %>
         </div>
       <% else %>
-        <div class="center-button">
-          <%= link_to 'read more', post, class: 'btn btn-primary' %>
-        </div>
-      <% end %>
-    </div>
-
-    <div class="post_s col-lg-12 center text_edit3">
-      <h1 class="title_post"><%= link_to post.title, post %></h1>
-      <% category = Category.find(post.category_id) %>
-      <p class="posted_at">Posted <%= time_ago_in_words(post.created_at) %> ago in <%= link_to category.name, category_path(category.id) %></p>
-      <div class="body_post_xs">
-        <% blog_post = truncate post.body, length: 300, escape: false %>
-        <%= blog_post %>
-      </div>
-      <% if blog_post.length < 300 %>
-        <div class="center-button">
-          <% if post.comments.any? %>
-            <% comment_count = post.comments.count %>
-            <%= link_to "show comments (#{comment_count})", post_path(post.id), class: "btn btn-primary" %>
-          <% else %>
-            <%= link_to "leave a comment", post_path(post.id), class: "btn btn-primary" %>
-          <% end %>
-        </div>
-      <% else %>
-        <div class="center-button">
-          <%= link_to 'read more', post, class: 'btn btn-primary' %>
-        </div>
-      <% end %>
-    </div>
-
-    <div class="post_m col-lg-12 center text_edit3">
-      <h1 class="title_post"><%= link_to post.title, post %></h1>
-      <% category = Category.find(post.category_id) %>
-      <p class="posted_at">Posted <%= time_ago_in_words(post.created_at) %> ago in <%= link_to category.name, category_path(category.id) %></p>
-      <div class="body_post_xs">
-        <% blog_post = truncate post.body, length: 200, escape: false %>
-        <%= blog_post %>
-      </div>
-      <% if blog_post.length < 200 %>
-        <div class="center-button">
-          <% if post.comments.any? %>
-            <% comment_count = post.comments.count %>
-            <%= link_to "show comments (#{comment_count})", post_path(post.id), class: "btn btn-primary" %>
-          <% else %>
-            <%= link_to "leave a comment", post_path(post.id), class: "btn btn-primary" %>
-          <% end %>
-        </div>
-      <% else %>
-        <div class="center-button">
-          <%= link_to 'read more', post, class: 'btn btn-primary' %>
-        </div>
-      <% end %>
-    </div>
-
-    <div class="post_l col-lg-12 center text_edit3">
-      <h1 class="title_post"><%= link_to post.title, post %></h1>
-      <% category = Category.find(post.category_id) %>
-      <p class="posted_at">Posted <%= time_ago_in_words(post.created_at) %> ago in <%= link_to category.name, category_path(category.id) %></p>
-      <div class="body_post_xs">
-        <% blog_post = truncate post.body, length: 200, escape: false %>
-        <%= blog_post %>
-      </div>
-      <% if blog_post.length < 200 %>
-        <div class="center-button">
-          <% if post.comments.any? %>
-            <% comment_count = post.comments.count %>
-            <%= link_to "show comments (#{comment_count})", post_path(post.id), class: "btn btn-primary" %>
-          <% else %>
-            <%= link_to "leave a comment", post_path(post.id), class: "btn btn-primary" %>
-          <% end %>
-        </div>
-      <% else %>
-        <div class="center-button">
-          <%= link_to 'read more', post, class: 'btn btn-primary' %>
+        <div class="text-center">
+        <%= link_to 'read more', post, class: 'btn btn-primary' %>
         </div>
       <% end %>
     </div>

@@ -1,6 +1,6 @@
 <div class="container-fluid page_height">
-  <div class="row no_padding">
-    <div class="col-lg-12 center shell2">
+  <div class="row no_padding post_margin">
+    <div class="col-lg-12 center categories_body">
       <div class="upper">
         <div class="buttons">
           <div class="button red">
@@ -13,24 +13,21 @@
         <span class="title">-bash</span>
       </div>
       <div class="enter">
-        <h1 class="terminal_title">/categories</h1>
-        <span class="terminal_text">[</span><span class="terminal_text terminal_user">[terminal]: ~$</span>
-        <span class="terminal_text">cat categories.txt</span>
+        <h1>{categories}</h1>
         <% if logged_in? %>
-          <div class="comment_button">
+          <div class="text-center">
             <%= link_to "New Category", new_category_path, class: "btn btn-primary" %>
           </div>
         <% end %>
         <% @categories.each do |category| %>
-          <ul>
-            <li class="terminal_text1 cat_height">*<%= link_to category.name, category %></li>
-          </ul>
+            <div class="text-center category_font"><%= link_to category.name.downcase, category%></div>
           <% if logged_in? %>
+          <div class="text-center">
             <span><%= link_to "edit", edit_category_path(category.id),class: "btn btn-primary" %></span>
             <span><%= link_to "delete", category, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary" %></span>
+          <div>
           <% end %>
         <% end %>
-        <span class="terminal_text">[</span><span class="cursor" class="terminal_text terminal_user">[terminal]: ~$</span>
       </div>
     </div>
   </div>

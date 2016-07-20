@@ -38,6 +38,35 @@ html {
   min-height: 100%;
 }
 
+/* colors */
+
+.neon_green {
+  color: $neon_green;
+}
+
+.black {
+  color: black;
+}
+
+.orange {
+  color: $orange;
+}
+
+.red{
+  background: $redCircle;
+  border: 1px solid darken(#f04341, 10%);
+}
+
+.yellow{
+  background: $yellowCircle;
+  border: 1px solid darken(#f5b868, 10%);
+}
+
+.green{
+  background: $greenCircle;
+  border: 1px solid darken(#96cf7d, 10%);
+}
+
 /* XS Screen < 768px */
 
 @import 'xs_screen';
