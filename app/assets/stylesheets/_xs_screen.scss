@@ -86,10 +86,10 @@
 /* Body */
 
 body {
+  background-color: $terminalBlack;
   font-family: "Dejavu Sans Mono";
   background-image: image-url("background.jpg");
-  background-size: 100% auto;
-  backgroun-color: $terminalBlack;
+  background-size: 100%;
   background-repeat: repeat-y;
   padding-top: 70px;
   padding-bottom: 90px;
@@ -332,6 +332,22 @@ body {
   position: relative;
   top: -70px;
   visibility: hidden;
+}
+
+#post_s {
+  display: none;
+}
+
+#intro_xs {
+  display: block;
+}
+
+#intro_and_bash {
+  display: none;
+}
+
+#about_me_blog {
+  display: none;
 }
 
 /* Footer */

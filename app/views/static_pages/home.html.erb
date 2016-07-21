@@ -1,26 +1,118 @@
-<div class="container-fluid">
+<div id="intro_xs" class="container-fluid fixed-app-size">
   <div class="row">
-    <div class="col-xs-12 mac_app_body">
-      <div class="upper">
-        <div class="buttons">
-          <div class="button red">
+      <div class="col-xs-12 col-md-12 mac_app_body">
+        <div class="upper">
+          <div class="buttons">
+            <div class="button red">
+            </div>
+            <div class="button yellow">
+            </div>
+            <div class="button green">
+            </div>
           </div>
-          <div class="button yellow">
+          <span class="title">self_portrait.txt</span>
+        </div>
+        <div class="enter">
+          <div class="align_glyph">
+          <%= image_tag("face.png", class: "face") %>
           </div>
-          <div class="button green">
+          <div>
+            <h2 class="text-center"> Hello_World! </h2>
+            <p class="text-center"> I'm a full stack web developer; I design and  develop responsive and dynamic websites. Keep scrolling to learn more  about me. </p>
+            <div class="align_glyph">
+              <a href="http://www.instagram.com/devosorio"><%= image_tag("instagram.png", class: "glyph_size") %></a>
+              <a href="https://github.com/cubadomingo"><%= image_tag("github.png",  class: "glyph_size") %></a>
+            </div>
           </div>
         </div>
-        <span class="title">introduction.txt</span>
+        </div>
       </div>
-      <div class="enter">
-        <div class="align_glyph">
-        <%= image_tag("face.png", class: "face") %>
+  </div>
+</div>
+
+<div id="intro_and_bash" class="container-fluid fixed-app-size">
+  <div class="row">
+    <div class="col-md-6 terminal-resize">
+      <div class="col-xs-12 col-md-12 mac_app_body">
+        <div class="upper">
+          <div class="buttons">
+            <div class="button red">
+            </div>
+            <div class="button yellow">
+            </div>
+            <div class="button green">
+            </div>
+          </div>
+          <span class="title">self_portrait.txt</span>
         </div>
-        <h2 class="text-center"> Hello_World! </h2>
-        <p class="text-center"> I'm a full stack web developer; I design and develop responsive and dynamic websites. Keep scrolling to learn more about me. </p>
-        <div class="align_glyph">
-          <a href="http://www.instagram.com/devosorio"><%= image_tag("instagram.png", class: "glyph_size") %></a>
-          <a href="https://github.com/cubadomingo"><%= image_tag("github.png", class: "glyph_size") %></a>
+        <div class="enter">
+          <div class="align_glyph">
+          <%= image_tag("face.png", class: "face") %>
+          </div>
+          <div id="description_xs">
+            <h2 class="text-center"> Hello_World! </h2>
+            <p class="text-center"> I'm a full stack web developer; I design and  develop responsive and dynamic websites. Keep scrolling to learn more  about me. </p>
+            <div class="align_glyph">
+              <a href="http://www.instagram.com/devosorio"><%= image_tag("instagram.png", class: "glyph_size") %></a>
+              <a href="https://github.com/cubadomingo"><%= image_tag("github.png",  class: "glyph_size") %></a>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+
+    <div class="col-md-6 intro_and_time">
+      <div class="row">
+        <div class="col-xs-12 col-md-12 mac_app_body intro-margin">
+          <div class="upper">
+            <div class="buttons">
+              <div class="button red">
+              </div>
+              <div class="button yellow">
+              </div>
+              <div class="button green">
+              </div>
+            </div>
+            <span class="title">introduction.txt</span>
+          </div>
+          <div class="enter">
+            <div class="align_glyph">
+            </div>
+            <h2 class="text-center"> Hello_World! </h2>
+            <p class="text-center"> I'm a full stack web developer; I design and   develop responsive and dynamic websites. Keep scrolling to learn more   about me. </p>
+            <div class="align_glyph">
+              <a href="http://www.instagram.com/devosorio"><%= image_tag("instagram.png", class: "glyph_size") %></a>
+              <a href="https://github.com/cubadomingo"><%= image_tag("github.png",   class: "glyph_size") %></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-md-12 mac_app_body">
+          <div class="upper">
+            <div class="buttons">
+              <div class="button red">
+              </div>
+              <div class="button yellow">
+              </div>
+              <div class="button green">
+              </div>
+            </div>
+            <span class="title">-bash</span>
+          </div>
+          <div class="enter">
+            <div class="terminal_prompt">
+              <span class="p_symbol">[</span><span class="t_symbol">[terminal]: ~$</span><span class="p_symbol"> date</span>
+            </div>
+            <p><%= Time.now.strftime('%c') %></p>
+            <div id="ip-l" class="terminal_prompt">
+              <span class="p_symbol">[</span><span class="t_symbol">[terminal]: ~$</span><span class="p_symbol"> ipconfig getifaddr en2 ; sw_vers</span>
+              <p>IP: <%= @ip %></p>
+              <p>OperatingSystem: <%= get_operating_system %></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

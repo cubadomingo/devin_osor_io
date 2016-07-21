@@ -1,55 +1,88 @@
-<div class="container-fluid">
+<div class="container-fluid fixed-app-size">
   <div class="row">
-    <div class="col-lg-12 mac_app_body_blog">
-      <div class="upper">
-        <div class="buttons">
-          <div class="button red">
-          </div>
-          <div class="button yellow">
-          </div>
-          <div class="button green">
-          </div>
-          <span class="title">blog_post</span>
-        </div>
-      </div>
-    <div class="enter">
-      <% category = Category.find(@post.category_id) %>
-      <h1><%= @post.title %></h1>
-      <p class="posted_at">Posted <%= time_ago_in_words(@post.created_at) %> ago in <%= link_to category.name, category_path(category.id) %></p>
-      <div class="blog_post"><%= raw(@post.body) %></div>
-      <% if logged_in? %>
-        <div class="text-center">
-          <%= link_to "edit", edit_post_path(@post.id), class: 'btn btn-primary button-margin-bottom' %>
-          <%= link_to "delete", @post, method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>
-        </div>
-      <% end %>
-      <div>
-        <% if @post.comments.any? %>
-          <h2 class="text-center">Comments (<%= @post.comments.count %>)</h2>
-          <%  @post.comments.each do |comment| %>
-            <div>
-              <p>Comment by <%= comment.name %></p>
-              <p><%= comment.body %></p>
-              <p>Posted <%= time_ago_in_words(comment.created_at) %> ago</p>
+    <div class="col-lg-8">
+      <div class="col-lg-12 mac_app_body_blog">
+        <div class="upper">
+          <div class="buttons">
+            <div class="button red">
             </div>
-          <% end %>
+            <div class="button yellow">
+            </div>
+            <div class="button green">
+            </div>
+            <span class="title">blog_post</span>
+          </div>
+        </div>
+      <div class="enter">
+        <% category = Category.find(@post.category_id) %>
+        <h1><%= @post.title %></h1>
+        <p class="posted_at">Posted <%= time_ago_in_words(@post.created_at) %> ago in <%= link_to category.name, category_path(category.id) %></p>
+        <div class="blog_post"><%= raw(@post.body) %></div>
+        <% if logged_in? %>
+          <div class="text-center">
+            <%= link_to "edit", edit_post_path(@post.id), class: 'btn btn-primary button-margin-bottom' %>
+            <%= link_to "delete", @post, method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>
+          </div>
         <% end %>
-      </div>
-      <h2 class="text-center"> Leave a comment </h2>
-        <%= form_for @comment do |f| %>
-
-              <%= f.hidden_field :post_id, :value => @post.id %>
-
-              <%= f.label :name %>
-              <%= f.text_field :name, class: 'form-control' %>
-
-              <%= f.label :body %>
-              <%= f.text_area :body, class: 'form-control comment_reply', 'placeholder' => 'Have anything to say?' %>
-
-              <div class="text-center button-margin">
-              <%= f.submit "Post Comment", class: 'btn btn-primary' %>
+        <div>
+          <% if @post.comments.any? %>
+            <h2 class="text-center">Comments (<%= @post.comments.count %>)</h2>
+            <%  @post.comments.each do |comment| %>
+              <div>
+                <p>Comment by <%= comment.name %></p>
+                <p><%= comment.body %></p>
+                <p>Posted <%= time_ago_in_words(comment.created_at) %> ago</p>
               </div>
-        <% end %>
+            <% end %>
+          <% end %>
+        </div>
+        <h2 class="text-center"> Leave a comment </h2>
+          <%= form_for @comment do |f| %>
+
+                <%= f.hidden_field :post_id, :value => @post.id %>
+
+                <%= f.label :name %>
+                <%= f.text_field :name, class: 'form-control' %>
+
+                <%= f.label :body %>
+                <%= f.text_area :body, class: 'form-control comment_reply', 'placeholder' => 'Have anything to say?' %>
+
+                <div class="text-center button-margin">
+                <%= f.submit "Post Comment", class: 'btn btn-primary' %>
+                </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div id="about_me_blog" class="col-lg-12 mac_app_body_blog">
+       <div class="upper">
+         <div class="buttons">
+           <div class="button red">
+           </div>
+           <div class="button yellow">
+           </div>
+           <div class="button green">
+           </div>
+         </div>
+         <span class="title">welcome.txt</span>
+       </div>
+        <div class="enter">
+          <div class="align_glyph">
+          <%= image_tag("face.png", class: "face") %>
+          </div>
+          <h2 class="text-center">Welcome to my blog!</h2>
+          <p>I'm Devin, a huge tech nerd currently living in Washington D.C. This blog is a mix of everything going on in my life, so feel free to check the categories if you want to read about a certain topic. </p>
+          <li><a href="/#about">about</a></li>
+          <li><a href="/#skills">skills</a></li>
+          <li><a href="/#projects">projects</a></li>
+          <li><a href="/#contact">contact</a></li>
+          <div class="align_glyph">
+            <a href="http://www.instagram.com/devosorio"><%= image_tag("instagram.png", class: "glyph_size") %></a>
+            <a href="https://github.com/cubadomingo"><%= image_tag("github.png",  class: "glyph_size") %></a>
+          </div>
+        </div>
       </div>
     </div>
   </div>

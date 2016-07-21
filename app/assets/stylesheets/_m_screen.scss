@@ -38,8 +38,8 @@
 
 body {
 padding-top: 90px;
-padding-left: 50px;
-padding-right: 50px;
+padding-left: 70px;
+padding-right: 70px;
 
   h1 {
     font-size: 20px;
@@ -74,6 +74,19 @@ padding-right: 50px;
   #post_xs {
     display: none;
   }
+  #description_xs {
+    display: none;
+  }
+  #intro_xs {
+    display: none;
+  }
+  #intro_and_bash {
+    display: block;
+  }
+
+  #ip-l {
+    display: none;
+  }
 
 .mac_app_body {
   margin-bottom: 40px;
@@ -96,6 +109,12 @@ padding-right: 50px;
   }
 }
 
+.intro_and_time {
+  .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+}
 /* Terminal Prompt */
 
 
@@ -104,17 +123,21 @@ padding-right: 50px;
 }
 
 
-
 /* Text Area Styling */
 
 .body_field {
   min-height: 220px;
 }
 
-.resize_mac_app {
-  width: 400px;
+/* Resize */
+
+.terminal-resize {
+  min-height: 100%;
 }
 
+.intro-margin {
+  margin-bottom: 28px;
+}
 /* Footer */
 
 footer {
