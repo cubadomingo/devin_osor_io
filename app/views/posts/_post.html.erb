@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="post_xs col-lg-12 mac_app_body_blog">
+    <div id="post_xs" class="col-xs-12 mac_app_body_blog">
       <div class="upper">
         <div class="buttons">
           <div class="button red">
@@ -11,7 +11,7 @@
           </div>
         </div>
         <span class="title">blog_post.txt</span>
-      </div >
+      </div>
       <div class="enter">
       <h1><%= link_to post.title, post %></h1>
       <% category = Category.find(post.category_id) %>
@@ -32,6 +32,34 @@
         <%= link_to 'read more', post, class: 'btn btn-primary' %>
         </div>
       <% end %>
+      </div>
+    </div>
+
+     <div class="col-xs-12 mac_app_body_blog">
+      <div class="upper">
+        <div class="buttons">
+          <div class="button red">
+          </div>
+          <div class="button yellow">
+          </div>
+          <div class="button green">
+          </div>
+        </div>
+        <span class="title">blog_post.txt</span>
+      </div>
+      <div class="enter">
+        <h1><%= link_to post.title, post %></h1>
+        <% category = Category.find(post.category_id) %>
+        <p>Posted <%= time_ago_in_words(post.created_at) %> ago in <%= link_to category.name, category_path(category.id) %></p>
+        <%= post.body.html_safe %>
+        <div class="text-center">
+          <% if post.comments.any? %>
+            <% comment_count = post.comments.count %>
+            <%= link_to "show comments (#{comment_count})", post_path(post.id), class: "btn btn-primary" %>
+          <% else %>
+            <%= link_to "leave a comment", post_path(post.id), class: "btn btn-primary" %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

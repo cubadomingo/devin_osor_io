@@ -4,11 +4,11 @@
   margin-bottom: 0px;
 
   .navbar-collapse {
-    border-color: $white;
+    border-color: $terminalBlack;
   }
 
   .navbar-brand {
-    font-size: 20px;
+    font-size: 18px;
     color: $white;
 
     &:visited {
@@ -19,7 +19,7 @@
 
 .navbar-default {
   background: $terminalBlack;
-  border-color: $white;
+  border-color: $terminalBlack;
 
   .navbar-toggle {
     border-color: $white;
@@ -89,6 +89,7 @@ body {
   font-family: "Dejavu Sans Mono";
   background-image: image-url("background.jpg");
   background-size: 100% auto;
+  backgroun-color: $terminalBlack;
   background-repeat: repeat-y;
   padding-top: 70px;
   padding-bottom: 90px;
@@ -98,29 +99,29 @@ body {
 
   h1 {
     a {
-      font-size: 20px;
+      font-size: 18px;
     }
     color: $white;
-    font-size: 20px;
-    margin-top: 0px;
+    font-size: 18px;
+    margin-top: 10px;
   }
 
   h2 {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   p {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   li {
     list-style-type: none;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 15px;
   }
 
   a {
-    font-size: 16px;
+    font-size: 12px;
     color: $white;
     text-decoration: none;
     text-align: center;
@@ -158,25 +159,25 @@ body {
   padding-top: 0px;
 
   .buttons {
-    margin-left: 5px;
+    margin-left: 4px;
     margin-top: 0px;
   }
 
   .button{
-    width: 13px;
-    height: 13px;
+    width: 10px;
+    height: 10px;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
-    margin-top: 5px;
-    margin-left: 9px;
+    margin-top: 7px;
+    margin-left: 8px;
     float: left;
   }
 
   .title{
     color: black;
-    margin-left: -70px;
-    font-size: 15px;
+    margin-left: -60px;
+    font-size: 12px;
   }
 }
 
@@ -221,16 +222,16 @@ body {
   }
 
   li {
-    line-height: 25px;
+    line-height: 18px;
   }
 
   p {
-    line-height: 25px;
+    line-height: 18px;
     margin-top: 10px;
   }
 
   h2 {
-    margin-top: 0;
+    margin-top: 10px;
     color: $neon_green;
   }
 }
@@ -239,7 +240,7 @@ body {
 
 
 .terminal_prompt {
-  font-size: 16px;
+  font-size: 12px;
 
   .t_symbol {
     color: $neon_green;
@@ -308,10 +309,11 @@ body {
 .btn-primary {
   border-color: $neon_green;
   background-color: $neon_green;
+  width: 100%;
 
   &:hover {
-    border-color: $black;
-    background-color: $black;
+    border-color: $neon_green;
+    background-color: $neon_green;
   }
 }
 
@@ -322,7 +324,6 @@ body {
 .button-margin-bottom {
   margin-bottom: 10px;
 }
-
 
 /* Miscellaneous */
 
@@ -337,24 +338,26 @@ body {
 
 footer {
 
+  .container_fluid {
+    padding-botton: 0px;
+  }
+
   p {
     color: $neon_green;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .footer_links {
     word-spacing: 25px;
 
     a {
-      font-size: 20px;
+      font-size: 16px;
     }
   }
 
-  font-size: 20px;
   padding-top: 5px;
   padding-left: 10px;
   padding-right: 10px;
-  padding-bottom: 5px;
   background-color: $terminalBlack;
   position: absolute;
   left: 0;

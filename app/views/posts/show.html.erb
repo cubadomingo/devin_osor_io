@@ -18,9 +18,9 @@
       <p class="posted_at">Posted <%= time_ago_in_words(@post.created_at) %> ago in <%= link_to category.name, category_path(category.id) %></p>
       <div class="blog_post"><%= raw(@post.body) %></div>
       <% if logged_in? %>
-        <div class="text-center button-margin-bottom">
-          <span><%= link_to "edit", edit_post_path(@post.id), class: 'btn btn-primary' %></span>
-          <span><%= link_to "delete", @post, method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %></span>
+        <div class="text-center">
+          <%= link_to "edit", edit_post_path(@post.id), class: 'btn btn-primary button-margin-bottom' %>
+          <%= link_to "delete", @post, method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>
         </div>
       <% end %>
       <div>

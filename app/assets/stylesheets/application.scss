@@ -70,12 +70,20 @@ html {
   border: 1px solid darken(#96cf7d, 10%);
 }
 
-/* XS Screen < 768px */
+
+/* XS Screen < 320px */
+
+
+/* XS Screen */
+
 
 @import 'xs_screen';
 
-/* Small Screen > 768px */
+/* Small Screen < 768px */
 
+@media (min-width: 768px) {
+@import 's_screen';
+}
 
 /* Medium Screen > 992px */
 

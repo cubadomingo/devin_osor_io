@@ -41,6 +41,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.4'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers', '~> 3.1'
+  gem 'passenger'
 end
 
 group :development do

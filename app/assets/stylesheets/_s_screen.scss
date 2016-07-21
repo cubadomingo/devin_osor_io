@@ -1,0 +1,123 @@
+/* Navbar */
+
+.navbar {
+  .navbar-brand {
+    font-size: 20px;
+    color: $white;
+
+    &:visited {
+      color: $white;
+    }
+  }
+}
+
+.dropdown-menu {
+  background-color: $terminalBlack;
+}
+
+.navbar-default {
+  .navbar-nav {
+    li {
+      a {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+
+/* Body */
+
+body {
+padding-top: 90px;
+padding-left: 50px;
+padding-right: 50px;
+
+  h1 {
+    font-size: 20px;
+
+    a {
+      font-size: 20px;
+    }
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  li {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  a {
+    font-size: 14px;
+  }
+}
+
+
+
+/* Mac App Body */
+
+  #post_xs {
+    display: none;
+  }
+
+.mac_app_body {
+  margin-bottom: 40px;
+}
+
+.mac_app_body_blog {
+  margin-bottom: 40px;
+}
+
+.enter{
+  padding-bottom: 20px;
+
+  li {
+    line-height: 20px;
+  }
+
+  p {
+    line-height: 20px;
+
+  }
+}
+
+/* Terminal Prompt */
+
+
+.terminal_prompt {
+  font-size: 14px;
+}
+
+
+
+/* Text Area Styling */
+
+.body_field {
+  min-height: 220px;
+}
+
+
+/* Footer */
+
+footer {
+
+  p {
+    color: $neon_green;
+    font-size: 14px;
+  }
+
+  .footer_links {
+    word-spacing: 25px;
+
+    a {
+      font-size: 18px;
+    }
+  }
+}

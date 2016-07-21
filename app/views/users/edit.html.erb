@@ -1,6 +1,6 @@
 <div class="container-fluid">
-  <div class="row post_margin">
-    <div class="col-xs-12 categories_body">
+  <div class="row">
+    <div class="col-xs-12 mac_app_body">
       <div class="upper">
         <div class="buttons">
           <div class="button red">
@@ -10,9 +10,9 @@
           <div class="button green">
           </div>
         </div>
+        <span class="title">update_your_profile</span>
       </div>
       <div class="enter">
-        <h2>update_your_profile</h2>
           <div>
             <%= form_for(@user) do |f| %>
               <%= render 'shared/error_messages' %>
@@ -29,7 +29,7 @@
               <%= f.label :password_confirmation %>
               <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-              <div class="text-center buttons_top_margin">
+              <div class="text-center button-margin">
               <%= f.submit "Save changes", class: 'btn btn-primary' %>
               </div>
             <% end %>
