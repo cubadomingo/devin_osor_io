@@ -25,19 +25,46 @@
   }
 }
 
+/* Hide and Display */
+
 #post_xs {
   display: none;
 }
 
+#description_xs {
+    display: none;
+  }
+
 #post_s {
   display: block;
+}
+
+#intro_xs {
+    display: none;
+  }
+
+#intro_and_bash {
+    display: block;
+  }
+
+#ip-l {
+    display: none;
+  }
+
+/* Images */
+
+
+.face {
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
 }
 
 
 /* Body */
 
 body {
-padding-top: 90px;
+padding-top: 60px;
 padding-left: 50px;
 padding-right: 50px;
 
@@ -71,10 +98,6 @@ padding-right: 50px;
 
 /* Mac App Body */
 
-  #post_xs {
-    display: none;
-  }
-
 .mac_app_body {
   margin-bottom: 40px;
 }
@@ -94,6 +117,15 @@ padding-right: 50px;
     line-height: 20px;
 
   }
+}
+
+.fixed-app-size {
+  width: 670px;
+}
+
+
+.intro-margin {
+  margin-bottom: 26px;
 }
 
 /* Terminal Prompt */

@@ -91,10 +91,10 @@ body {
   background-image: image-url("background.jpg");
   background-size: 100%;
   background-repeat: repeat-y;
-  padding-top: 70px;
+  padding-top: 60px;
   padding-bottom: 90px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
   color: $grey;
 
   h1 {
@@ -324,6 +324,7 @@ body {
 .button-margin-bottom {
   margin-bottom: 10px;
 }
+
 
 /* Miscellaneous */
 

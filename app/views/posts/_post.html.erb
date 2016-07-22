@@ -54,9 +54,9 @@
           <div class="text-center">
             <% if post.comments.any? %>
               <% comment_count = post.comments.count %>
-              <%= link_to "show comments (#{comment_count})", post_path(post.id), clas: "btn btn-primary" %>
+              <%= link_to "show comments (#{comment_count})", post_path(post.id), class: "btn btn-primary" %>
             <% else %>
-              <%= link_to "leave a comment", post_path(post.id), class: "btnbtn-primary" %>
+              <%= link_to "leave a comment", post_path(post.id), class: "btn btn-primary" %>
             <% end %>
           </div>
         </div>
