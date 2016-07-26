@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="enter">
-        <div>
+        <div id="session">
           <%= form_for(:session, url: login_path) do |f| %>
           <%= f.label :email %>
           <%= f.email_field :email, class: 'form-control' %>
@@ -24,7 +24,7 @@
             <%= f.check_box :remember_me %>
             <span>Remember me</span>
             <% end %>
-            <%= f.submit "Log in", class: 'btn btn-primary' %>
+            <%= f.submit "log in", class: 'btn btn-primary' %>
           </div>
           <% end %>
           </div>

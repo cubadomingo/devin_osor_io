@@ -50,11 +50,11 @@
         color: $white;
         font-size: 22px;
         text-align: left;
+      }
 
-        &:hover {
-          background-color: $grey;
-          color: $white;
-        }
+      a:hover {
+         background-color: $grey;
+        color: $white;
       }
     }
 
