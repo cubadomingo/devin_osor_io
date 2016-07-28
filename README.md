@@ -1,4 +1,6 @@
 ![ALT TEXT](http://i.imgur.com/mmhmp3h.png)
+[![Build Status](https://travis-ci.org/cubadomingo/terminal_theme_blog.svg?branch=master)](https://travis-ci.org/cubadomingo/terminal_theme_blog)
+
 ## Description
 
 This web application is for my terminal themed personal site. It includes custom build authentication, with sessions and cookies, as well as authentication. It includes the ability to login and update my user information, but not create or delete users, since I am the only user for the site I saw no need in doing so. Once logged in I can use all the CRUD functions for blog posts and categories. Anonymous users can also leave comments in each blog post but not delete or update, although the user does have the ability to delete comments. The website is also responsive for all screen sizes.
