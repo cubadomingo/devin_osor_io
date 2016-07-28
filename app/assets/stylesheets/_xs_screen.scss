@@ -56,6 +56,14 @@
          background-color: $grey;
         color: $white;
       }
+
+      a:visited {
+        color: $white;
+      }
+
+      a:focus {
+        color: $white;
+      }
     }
 
     .open {
@@ -365,7 +373,6 @@ footer {
   }
 
   .footer_links {
-    word-spacing: 25px;
 
     a {
       font-size: 16px;
