@@ -1,3 +1,5 @@
+#Terminal Themed Blog
+
 [![Build Status](https://travis-ci.org/cubadomingo/terminal_theme_blog.svg?branch=master)](https://travis-ci.org/cubadomingo/terminal_theme_blog)
 [![Coverage Status](https://coveralls.io/repos/github/cubadomingo/terminal_theme_blog/badge.svg?branch=master)](https://coveralls.io/github/cubadomingo/terminal_theme_blog?branch=master)
 
