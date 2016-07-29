@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     @comment = Comment.new
   end
 
@@ -27,12 +27,12 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     @categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
   def update
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     @post.category_id = params[:category_id]
     if @post.update_attributes(post_params)
       flash[:success] = "Post succesfully edited!"
@@ -43,7 +43,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     if @post.destroy
       flash[:success] = "Post succesfully deleted!"
       redirect_to blog_path
