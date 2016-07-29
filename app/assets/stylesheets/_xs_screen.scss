@@ -4,7 +4,7 @@
   margin-bottom: 0px;
 
   .navbar-collapse {
-    border-color: $terminalBlack;
+    border-color: white;
   }
 
   .navbar-brand {
@@ -19,7 +19,7 @@
 
 .navbar-default {
   background: $terminalBlack;
-  border-color: $terminalBlack;
+  border-color: white;
 
   .navbar-toggle {
     border-color: $white;
@@ -101,8 +101,6 @@ body {
   background-repeat: repeat-y;
   padding-top: 60px;
   padding-bottom: 90px;
-  padding-left: 25px;
-  padding-right: 25px;
   color: $grey;
 
   h1 {
@@ -151,6 +149,8 @@ body {
     }
   }
 }
+
+
 
 /* Mac App Bar */
 
@@ -325,6 +325,11 @@ body {
   }
 }
 
+.button-large {
+  width: 200px;
+}
+
+
 .button-margin {
   margin-top: 10px;
 }
@@ -341,6 +346,13 @@ body {
   position: relative;
   top: -70px;
   visibility: hidden;
+}
+
+.fixed-app-size {
+}
+
+.no-padding {
+  margin: 0px;
 }
 
 #post_s {
