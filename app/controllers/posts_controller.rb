@@ -2,8 +2,7 @@ class PostsController < ApplicationController
   before_action :logged_in_user, only: [:new, :create, :destroy, :update]
 
   def index
-    @user = User.find(3)
-    @posts = @user.posts
+    @posts = Post.all
   end
 
   def show

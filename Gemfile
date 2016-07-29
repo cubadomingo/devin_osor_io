@@ -18,11 +18,11 @@ gem 'coveralls', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'rspec-rails', '~> 3.4'
+  gem 'rspec-rails', '~> 3.5'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers', '~> 3.1'
   gem 'passenger'
-  gem 'capybara'
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -34,6 +34,11 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-passenger'
   gem 'spring'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
 end
 
 gem 'rails_12factor', group: :production

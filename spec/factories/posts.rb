@@ -1,7 +1,8 @@
 FactoryGirl.define do
 	factory :post do
-		title "test post 1"
-		body "This is a test body post to ensure that everything is
-		        working properly"
+    title "Test Post"
+    body  "This continues to be a test post"
+    category
+    user
 	end
 end

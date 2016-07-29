@@ -14,13 +14,13 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="drop_down_nav_font_size nav navbar-nav navbar-right">
         <% if params[:controller] == "static_pages" %>
-          <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/blog">check out my blog</a></li>
+          <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/blog">[check out my blog]</a></li>
         <% elsif params[:controller] == "posts" %>
           <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/">home</a></li>
           <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/categories">categories</a></li>
         <% else %>
           <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/">home</a></li>
-          <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/blog">check out my blog</a></li>
+          <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/blog">[check out my blog]</a></li>
         <% end %>
 
         <% if logged_in? %>
