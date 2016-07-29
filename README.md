@@ -5,7 +5,45 @@
 
 ## Description
 
-This web application is for my terminal themed personal site. It includes custom build authentication, with sessions and cookies, as well as authentication. It includes the ability to login and update my user information, but not create or delete users, since I am the only user for the site I saw no need in doing so. Once logged in I can use all the CRUD functions for blog posts and categories. Anonymous users can also leave comments in each blog post but not delete or update, although the user does have the ability to delete comments. The website is also responsive for all screen sizes.
+This web application is for my terminal themed personal site. It includes custom built authentication, with sessions and cookies, as well as authentication. It also gives a user the ability to login and update my user information, but not create or delete users, since there should only be one user for this blog I see no need in doing so. Once logged in a user can use all the CRUD functions for blog posts and categories. Anonymous visitors can also leave comments in each blog post but not delete or update, although the user does have the ability to delete comments. The website is also responsive for all screen sizes.
+
+## Installation
+
+This application uses PostgreSQL for the database. I use [Postgress.app](http://postgresapp.com/) to run Postgres locally on my mac.
+
+Once Postgres is running locally you want to update your database.yml file with your postgres username and password, or you can create a .env file and place it in there like so:
+
+```
+PG_DEV_USERNAME:yourusername
+PG_DEV_PASSWORD:yourpassword
+```
+
+This works because of the DOT-ENV gem.
+
+To install you want to clone the repository into your local machine and then run:
+
+1. `bundle install`
+2. `rake db:setup`
+
+The application is now installed. To view it locally on your machine:
+
+`rails server`
+
+and then visit [http://localhost:3000](http://localhost:3000)
+
+To create a user log in to the console:
+
+`rails console`
+
+and then create a user:
+
+```
+User.create(name: 'first last', email: 'user@example.com', password: 'fake_password', password_confirmation: 'fake_password')
+```
+
+Either replace the attributes with your information or sign in to the application with user@example.com and fake_password and then change these in the account settings.
+
+That's it, you now have a working terminal themed blog!
 
 ## Technology Stack
 
@@ -32,6 +70,12 @@ This web application is for my terminal themed personal site. It includes custom
 * Rails Framework: **RSpec**, **Capybara**
 * Tools: **Shoulda Matchers**, **factory_girl**
 
-## Contributin
+## Testing
 
-This is my **first web application ever built**. So I acknowledge the fact some of the code may look a bit weird, I haven't quite gotten to refactoring it yet. If you see certain features or code that could use some improvement I would appreciate your help very much. If you have any questions about the application feel free to [shoot me an email](mailto:devinosor.io).
+To run the tests for the app:
+
+`Bundle exec RSpec'
+
+## Contributing
+
+If you find any bugs, please feel free to create an issue and/or make a pull request. If you have any questions about the application feel free to [shoot me an email](mailto:devinosor.io).
