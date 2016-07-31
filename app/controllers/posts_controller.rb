@@ -20,7 +20,7 @@ class PostsController < ApplicationController
     @post.user_id = current_user.id
     if @post.save
       flash[:success] = "Post created!"
-      redirect_to blog_path
+      redirect_to root_url subdomain: 'blog'
     else
       render 'new'
     end
@@ -36,7 +36,7 @@ class PostsController < ApplicationController
     @post.category_id = params[:category_id]
     if @post.update_attributes(post_params)
       flash[:success] = "Post succesfully edited!"
-      redirect_to blog_path
+      redirect_to root_url subdomain: 'blog'
     else
       render 'edit'
     end
@@ -46,7 +46,7 @@ class PostsController < ApplicationController
     @post = Post.friendly.find(params[:id])
     if @post.destroy
       flash[:success] = "Post succesfully deleted!"
-      redirect_to blog_path
+      redirect_to root_url subdomain: 'blog'
     end
   end
 
