@@ -32,8 +32,8 @@
 
 <div id="intro_and_bash" class="container fixed-app-size">
   <div class="row">
-    <div class="col-sm-6 col-md-6 terminal-resize">
-      <div class="col-xs-12 col-sm-12 col-md-12 mac_app_body">
+    <div class="col-sm-6 col-md-6 no-padding-left">
+      <div class="col-xs-12 mac_app_body">
         <div class="upper">
           <div class="buttons">
             <div class="button red">
@@ -58,11 +58,11 @@
             </div>
           </div>
         </div>
-        </div>
       </div>
+    </div>
 
 
-    <div class="col-sm-6 col-md-6 intro_and_time">
+    <div class="col-xs-6 intro_and_time no-padding-right">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 mac_app_body intro-margin">
           <div class="upper">
@@ -90,7 +90,7 @@
       </div>
 
       <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 mac_app_body">
+        <div class="col-xs-12 col-sm-12 col-md-12 mac_app_body no-padding-right">
           <div class="upper">
             <div class="buttons">
               <div class="button red">
@@ -102,15 +102,30 @@
             </div>
             <span class="title">-bash</span>
           </div>
-          <div class="enter">
+          <div id="ip-m" class="enter">
             <div class="terminal_prompt">
-              <span class="p_symbol">[</span><span class="t_symbol">[terminal]: ~$</span><span class="p_symbol"> date</span>
+              <span class="p_symbol">[</span><span class="t_symbol">[terminal]: ~$</span><span class="p_symbol"> ruby date.rb</span>
             </div>
-            <p><%= Time.now.strftime('%c') %></p>
-            <div id="ip-l" class="terminal_prompt">
-              <span class="p_symbol">[</span><span class="t_symbol">[terminal]: ~$</span><span class="p_symbol"> ipconfig getifaddr en2 ; sw_vers</span>
-              <p>IP: <%= @ip %></p>
-              <p>OperatingSystem: <%= get_operating_system %></p>
+            <p>Hey, today is <%= Time.now.strftime("%m/%d/%Y")%>. It is about <%= I18n.l Time.now, :format => "%H %p", :locale => :"en"%>. Your IP address is <%= @ip %> and you're using a <%= get_operating_system %> computer. Cool!</p>
+            <div class="terminal_prompt">
+              <span class="p_symbol">[</span><span class="t_symbol cursor">[terminal]: ~$</span>
+            </div>
+          </div>
+          <div id="ip-l" class="enter">
+            <div class="terminal_prompt">
+              <span class="p_symbol">[</span><span class="t_symbol">[terminal]: ~$</span><span class="p_symbol"> ruby date.rb</span>
+            </div>
+            <p>Hey, today is <%= Time.now.strftime("%A")%>, <%= Time.now.strftime("%B %d")%>, <%= Date.today.year%>. It is about <%= I18n.l Time.now, :format => "%H:%M %p", :locale => :"en"%>.</p>
+            <p>Your IP address is <%= @ip %> and you're using a <%= get_operating_system %> computer. Cool!</p>
+            <% if get_operating_system == "MacOS" %>
+              <p> That's awesome I also use a Mac and love it. It's useful for all my programming needs... I should also mention I'm a huge Apple fan boy. You hear that Apple? My email is down the page if you want to send me anything for the free advertising!</p>
+            <% elsif get_operating_system == "Linux" %>
+              <p> I don't have a real Linux computer so to speak, just a Raspberry Pi but I am a pretty big fan of Ubuntu and Unix in general. I'm debating on getting a small personal computer from craigslist and installing Ubuntu on it just to mess around with.</p>
+            <% else get_operating_system == "Windows" %>
+              <p> Not going to lie... I'm not a huge fan of your operating system. I tried running it on my Mac with bootcamp since there's some software that will only run on Windows (I'm talking about you SolidWorks!), but I removed it after a week; I just can't get used to the UI.</p>
+            <% end %>
+            <div class="terminal_prompt">
+              <span class="p_symbol">[</span><span class="t_symbol cursor">[terminal]: ~$</span>
             </div>
           </div>
         </div>

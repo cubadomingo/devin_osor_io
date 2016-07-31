@@ -25,10 +25,6 @@
   }
 }
 
-#post_xs {
-  display: none;
-}
-
 #post_s {
   display: block;
 }
@@ -38,8 +34,6 @@
 
 body {
 padding-top: 90px;
-padding-left: 20px;
-padding-right: 20px;
 
   h1 {
     font-size: 20px;
@@ -88,6 +82,10 @@ padding-right: 20px;
     display: block;
   }
 
+  #about_me_blog {
+    display: block;
+  }
+
   #ip-l {
     display: none;
   }
@@ -126,6 +124,9 @@ padding-right: 20px;
   font-size: 14px;
 }
 
+.no-padding-right {
+  padding-right: 0px;
+}
 
 /* Text Area Styling */
 
@@ -144,7 +145,7 @@ padding-right: 20px;
 }
 
 .fixed-app-size {
-  width: 955px;
+  width: 940px;
 }
 /* Footer */
 
