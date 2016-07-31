@@ -1,13 +1,20 @@
 Rails.application.routes.draw do
-  root    'static_pages#home'
-  get     'login'       => 'sessions#new'
-  post    'login'       => 'sessions#create'
-  delete  'logout'      => 'sessions#destroy'
-  get     'blog'        => 'posts#index'
-  resources :users,      only: [:edit, :update]
-  resources :categories
-  resources :posts
-  resources :comments,   only: [:new, :create, :destroy]
+  constraints subdomain: false do
+    root    'static_pages#home'
+  end
+
+  constraints subdomain: 'blog' do
+    get '/' => 'posts#index'
+    get     'login'       => 'sessions#new'
+    post    'login'       => 'sessions#create'
+    delete  'logout'      => 'sessions#destroy'
+    resources :users,      only: [:edit, :update]
+    resources :posts
+    resources :categories
+    resources :comments,   only: [:new, :create, :destroy]
+
+  end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
