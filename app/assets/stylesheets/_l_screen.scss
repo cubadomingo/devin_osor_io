@@ -2,6 +2,10 @@
   display: block;
 }
 
+#ip-m {
+  display: none;
+}
+
 #about_me_blog {
   display: block;
 }
@@ -11,5 +15,13 @@
 }
 
 .fixed-app-size {
-  width: 1160px;
+  width: 1150px;
+}
+
+.no-padding-right {
+  padding-right: 0px;
+}
+
+.blog-margin-right {
+  marign-right: 20px;
 }

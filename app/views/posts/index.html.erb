@@ -4,16 +4,15 @@
  </div>
 <% end %>
 
-<div class="container-fluid fixed-app-size">
-  <div class="row">
-    <div class="col-lg-8 no-padding">
+<div class="container-fluid fixed-app-size no-padding">
+    <div class="col-xs-12 col-md-9 no-padding">
       <% if @posts.any? %>
         <%= render @posts %>
       <% end %>
     </div>
 
 
-    <div class="col-lg-4">
+    <div class="col-md-3 no-padding-right">
       <div id="about_me_blog" class="col-lg-12 mac_app_body_blog">
        <div class="upper">
          <div class="buttons">
@@ -34,11 +33,9 @@
           <p>I'm Devin, a huge tech nerd currently living in Washington D.C. This blog is a mix of everything going on in my life, so feel free to check the categories if you want to read about a certain topic. </p>
           <p class="text-center"><a href="/#about">Discover more about me!</a></p>
           <div class="align_glyph">
-            <a href="http://www.instagram.com/devosorio"><%= image_tag("instagram.png", class: "glyph_size") %></a>
             <a href="https://github.com/cubadomingo"><%= image_tag("github.png",  class: "glyph_size") %></a>
           </div>
         </div>
       </div>
     </div>
-  </div>
 </div>
