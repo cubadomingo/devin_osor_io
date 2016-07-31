@@ -18,7 +18,7 @@ class CategoriesController < ApplicationController
 		@category = current_user.categories.build(category_params)
 		 if @category.save
       flash[:success] = "New category created!"
-      redirect_to categories_path
+      redirect_to categories_url subdomain: 'blog'
     else
       render 'new'
     end
@@ -32,7 +32,7 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
     if @category.update_attributes(category_params)
       flash[:success] = "Category succesfully edited!"
-      redirect_to categories_path
+      redirect_to categories_url subdomain: 'blog'
     else
       render 'edit'
     end
@@ -42,7 +42,7 @@ class CategoriesController < ApplicationController
 		@category = Category.find(params[:id])
 		if @category.destroy
 			flash[:success] = "Category deleted"
-			redirect_to categories_path
+			redirect_to categories_url subdomain: 'blog'
 		end
 	end
 
