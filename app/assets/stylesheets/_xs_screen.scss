@@ -99,7 +99,6 @@ body {
   background-image: image-url("background.jpg");
   background-size: 100%;
   background-repeat: repeat-y;
-  padding-top: 60px;
   padding-bottom: 90px;
   color: $grey;
 
@@ -214,6 +213,34 @@ body {
   p {
     font-family: "Roboto";
   }
+
+  .enter {
+    ul {
+      font-family: "Roboto";
+      color: $grey;
+    }
+
+    li {
+      font-family: "Roboto";
+      color: $grey;
+    }
+
+    h2 {
+      font-family: "Roboto";
+      color: $grey;
+    }
+
+    h3 {
+      font-family: "Robot";
+      color: $grey;
+    }
+
+    h4 {
+      font-family: "Robot";
+      color: $grey;
+    }
+  }
+
 
   img {
     max-width: 100%;
@@ -348,6 +375,10 @@ body {
 
 
 /* Miscellaneous */
+
+.container-margin {
+  margin-top: 20px;
+}
 
 .anchor {
   display: block;

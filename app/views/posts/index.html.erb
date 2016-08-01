@@ -1,10 +1,10 @@
 <% if logged_in? %>
  <div class="text-center button-margin-bottom">
- <%= link_to "make a new post", new_post_path, class: "btn btn-primary button-large" %>
+ <%= link_to "make a new post", new_post_path, class: "btn btn-primary button-large button-margin" %>
  </div>
 <% end %>
 
-<div class="container-fluid fixed-app-size no-padding">
+<div class="container-fluid fixed-app-size no-padding container-margin">
     <div class="col-xs-12 col-md-9 no-padding">
       <% if @posts.any? %>
         <%= render @posts %>
