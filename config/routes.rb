@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   constraints subdomain: false do
-    root    'static_pages#home'
+    root to: 'static_pages#home'
   end
 
   constraints subdomain: 'blog' do
