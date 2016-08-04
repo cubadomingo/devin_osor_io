@@ -4,6 +4,7 @@ RSpec.feature "Logging in" do
 
   scenario "Logging in with correct credentials" do
     user = create :user
+    switch_to_subdomain("blog")
     visit '/login'
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
@@ -13,6 +14,7 @@ RSpec.feature "Logging in" do
 
   scenario "Logging in with incorrect credentials" do
     user = build :user
+    switch_to_subdomain("blog")
     visit '/login'
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
@@ -23,6 +25,7 @@ RSpec.feature "Logging in" do
   scenario "User logs out" do
     user = create :user
     Capybara.current_session.driver.header('User-Agent', 'Mac')
+    switch_to_subdomain("blog")
     visit '/login'
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
