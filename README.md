@@ -31,17 +31,12 @@ The application is now installed. To view it locally on your machine:
 
 and then visit [http://localhost:3000](http://localhost:3000)
 
-To create a user log in to the console:
+Log in with:
 
-`rails console`
+Username: User@example.com
+Password: Testing
 
-and then create a user:
-
-```
-User.create(name: 'first last', email: 'user@example.com', password: 'fake_password', password_confirmation: 'fake_password')
-```
-
-Either replace the attributes with your information or sign in to the application with user@example.com and fake_password and then change these in the account settings.
+Got to the settings and change to your information.
 
 That's it, you now have a working terminal themed blog!
 
