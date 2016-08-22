@@ -34,6 +34,7 @@ and then visit [http://localhost:3000](http://localhost:3000)
 Log in with:
 
 Username: User@example.com
+
 Password: Testing
 
 Got to the settings and change to your information.
